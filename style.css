@@ -231,15 +231,3 @@ footer svg{
   top:100%;
   left:5px;  
 }
-.user{
-  max-width:940px;
-  margin:0 auto;
-}
-.picture{
-  float:left;
-}
-.text{
-  float:right;
-  margin-left: 65px;
-  width: 470px
-}
