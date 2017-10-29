@@ -129,7 +129,7 @@ dd{
 .media svg{
 	width:30px;
 	height:30px;
-		color:white;
+	fill:white;
 	vertical-align: top;
 }
 .media a{
