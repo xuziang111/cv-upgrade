@@ -28,7 +28,7 @@ a{
 	font-family: "Hiragino Kaku Gothic Std";
 }
 .topNavBarIn{
-  padding:0 20px;
+  padding:20px 20px;
 }
 .rs{
 	color:#E6686A;
@@ -104,7 +104,7 @@ nav ul li a:hover{
 }
 .picCrad{
 	padding:50px;
-	margin-top:-480px;
+	margin-top:-300px;
 }
 hr{
 	margin:20px 0;
