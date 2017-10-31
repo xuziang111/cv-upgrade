@@ -275,7 +275,7 @@ dd{
 .jobs{
   position:relative;
   max-width:940px;
-  margin:30px;
+  margin:30px auto;
 }
 .jobs .big{
   position:absolute;
