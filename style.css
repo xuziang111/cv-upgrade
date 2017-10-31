@@ -2,6 +2,9 @@
 	margin:0;
 	padding:0
 }
+ol,li{
+  list-style:none;
+}
 h1,h2,h3,h4,h5,h6{
   font-weight: normal;
 }
@@ -173,21 +176,110 @@ dd{
 .skill{
   margin:60px auto;
   max-width: 940px;
+  
 }
 .skill h2{
   color:#3d4451;
   font-size:34px;
   font-weight: 600;
     text-align:center;
+  margin-bottom:30px;
 }
 .skill ol{
   display:block;
   list-style:none;
   padding:42px 50px 10px;
   background-color:white;
+  box-shadow:rgba(0, 0, 0, 0.5) 0px 1px 5px 0px;
 }
 .skill ol li{
   float:left;
+  width:48%;
+}
+.skill ol>li:nth-child(even){
+  float:right;
+}
+.progressBar{
+  height:5px;
+  background-color:#FAE1E1;
+  border-radius: 2px;
+    margin-bottom:40px;
+
+}
+.progressBar .progress{
+  height:5px;
+  background-color:#E6686A;
+  border-radius: 2px;
   width:50%;
-  
+}
+.skill>ol>li>h3{
+      font-size: 14px;
+    line-height: 1.1;
+  padding-bottom:3px;
+}
+.works{
+
+  text-align:center;
+}
+.works h2{
+  color:#3d4451;
+  font-size:34px;
+  font-weight: 600;
+    text-align:center;
+    margin-bottom:20px;
+}
+.works>nav{
+  vertical-align:top;
+  display:inline-block;
+   margin:0 auto;
+  max-width: 940px;
+}
+.works>nav>ol{
+ 
+  margin:0 auto;
+  display:inline-block;
+  vertical-align:top;
+}
+.works>nav>ol>li{
+  float:left;
+  margin-left:40px;
+  cursor:pointer;
+}
+.works>nav>ol>li:nth-child(1){
+  margin:0;
+}
+#worksBar{
+  margin-top:10px;
+  background-color:white;
+  height:5px;
+  border-radius:2px;
+}
+#worksBar .worksBarIn{
+  background-color:#E6686A;
+  height:100%;
+  border-radius:2px;
+  transition:all 0.2s;
+}
+.state1 .worksBarIn{
+  margin-left:0;
+  width:55px;
+}
+.state2 .worksBarIn{
+  margin-left:62px;
+  width:55px;
+}
+.state3 .worksBarIn{
+  width:100px;
+  margin-left:135px;
+}
+.jobs{
+  position:relative;
+  border:1px solid red;
+  margin:30px;
+}
+.jobs .big{
+  position:absolute;
+}
+.jobs .small{
+  position:absolute;
 }
