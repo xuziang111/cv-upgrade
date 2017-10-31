@@ -274,7 +274,7 @@ dd{
 }
 .jobs{
   position:relative;
-  border:1px solid red;
+  max-width:940px;
   margin:30px;
 }
 .jobs .big{
