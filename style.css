@@ -21,8 +21,9 @@ a{
 	clear:both
 }
 .topNavBar{
-    position:fixed;
-	width:100%
+  position:fixed;
+  width:100%;
+  z-index:1;
 }
 .topNavBar .logo{
 	float:left;
@@ -32,6 +33,12 @@ a{
 }
 .topNavBarIn{
   padding:20px 20px;
+  transition: all .3s;
+}
+.stick{
+  background-color:#fff;
+  box-shadow:0 0 8px rgba(0,0,0,0.5);
+  padding:10px 20px;
 }
 .rs{
 	color:#E6686A;
