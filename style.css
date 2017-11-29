@@ -18,7 +18,7 @@ a{
 .clearfix::after{
 	content:"";
 	display:block;
-	clear:both
+	clear:both;
 }
 .topNavBar{
   position:fixed;
@@ -56,19 +56,36 @@ nav ul li{
 	float:left;
 	color:grey;	
 	padding:9px 17px 10px 17px;
-	display:block;
+  display:block;
  }
 nav ul li a{
 	text-decoration:none;
 	color:#B7B7B7;
 	font-size:14px;
-	border-bottom:3px solid #E06567 transparent;
-	padding-bottom:8px;
+  padding-bottom:3px;
+  display:block;
+  position:relative;
 }
-nav ul li a:hover{
-  border-bottom:3px solid #E06567;
+nav > ul > li > a:hover::after{
+  content:'';
+  display:block;
+  background: #E06567;
+  height:3px;
+  width:100%;
+  position:absolute;
+  top:100%;
+  left:0;
+  animation: heng .3s linear;
+  border-radius:1.5px;
 }
-
+@keyframes heng{
+  0%{
+    width:0
+  }
+  100%{
+    width:100%;
+  }
+}
 .banner{
   height: 515px;
   background-image:url(https://github.com/xuziang111/cv/blob/master/rs-cover.jpg?raw=true);
