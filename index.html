@@ -3,9 +3,48 @@
   <head>
     <title>方方的个人简历</title>
     <link rel="stylesheet" href="./style.css">
-		<script src="//at.alicdn.com/t/font_457274_lij6unjshn2ep14i.js"></script>
+    <script src="//at.alicdn.com/t/font_457274_lij6unjshn2ep14i.js"></script>
+    <style>
+      .loading{
+        background-color:grey;
+        height:100vh;
+        width:100%;       
+      }
+      .loading::before,.loading::after{
+        content:'';
+        position:absolute;
+        background:black;
+        width:0px;
+        height:0px;
+        border-radius:50%;
+         top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        margin:auto;
+        animation:loadings 1.5s infinite linear;
+      }
+      .loading::after{
+          animation:loadings 1.5s infinite linear 0.7s;
+      }
+      
+      @keyframes loadings{
+        0%{
+          width:0px;
+          height:0px;
+          opacity:1;
+        }
+        100%{
+          width:100px;
+          height:100px;
+          opacity:0;
+        }
+      }
+    </style>
   </head>
   <body>
+      <div id='loading' class='loading'>
+        </div>
     <div class="topNavBar clearfix">
 	    <div class="topNavBarIn clearfix">
             <a class="logo" href="#" alt="logo">
@@ -144,15 +183,16 @@
 
     </section>
     <script>
-        works1.onclick=function(){
+      works1.onclick=function(){
         worksBar.className='state1';
-       };
-       works2.onclick=function(){
-       worksBar.className='state2';
-       };
-        works3.onclick=function(){
+      };
+      works2.onclick=function(){
+        worksBar.className='state2';
+      };
+      works3.onclick=function(){
         worksBar.className='state3';
-        };
+      };
+      loading.classList.remove('loading');
 </script>
   </body>
 </html>
