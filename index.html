@@ -46,21 +46,28 @@
         </div>
     <div class="topNavBar clearfix">
 	    <div id='topNavBarIn'class="topNavBarIn clearfix">
-            <a class="logo" href="#" alt="logo">
-                 <span class="rs">RS</span><span class="card">card</span>
-            </a>
-            <nav>
-                <ul class="clearfix">
-                    <li><a href="#">关于</a></li>
-                    <li><a href="#">技能</a></li>
-                    <li><a href="#">作品</a></li>
-                    <li><a href="#">博客</a></li>
-                    <li><a href="#">日历</a></li>
-                    <li><a href="#">联系方式</a></li>
-                    <li><a href="#">其他</a></li>
+        <a class="logo" href="#" alt="logo">
+          <span class="rs">RS</span><span class="card">card</span>
+        </a>
+        <nav>
+          <ul class="clearfix">
+            <li><a href="#">关于</a></li>
+            <li><a href="#">技能</a></li>
+            <li>
+              <a href="#">作品</a>
+                <ul>
+                  <li>作品1</li>
+                  <li>作品2</li>
+                  <li>作品3</li>
                 </ul>
-            </nav>
-        </div>
+            </li>
+            <li><a href="#">博客</a></li>
+            <li><a href="#">日历</a></li>
+            <li><a href="#">联系方式</a></li>
+            <li><a href="#">其他</a></li>
+          </ul>
+        </nav>
+      </div>
 	</div>
     <div class="banner">
 		  <div class="picTop">
@@ -70,14 +77,10 @@
       <div class="user">
         <div class="pictureAndText">
 					<div class="picCrad clearfix">
-          <div class="picture">
-						
-							
-            <img src="./img/avatar.jpg" alt="头像">
-						
+          <div class="picture">							
+            <img src="./img/avatar.jpg" alt="头像">					
           </div>
-          <div class="text">
-            
+          <div class="text">           
               <span class="welcome">Hello
                 <span class="triangle"></span>
               </span>
@@ -99,21 +102,20 @@
         </div>
         <footer class="media">
           <a href="#"><svg class="icon" aria-hidden="true">
-    <use xlink:href="#icon-github"></use>
-</svg></a>
+             <use xlink:href="#icon-github"></use>
+          </svg></a>
           <a href="#"><svg class="icon" aria-hidden="true">
-    <use xlink:href="#icon-twitter"></use>
-</svg></a>
+            <use xlink:href="#icon-twitter"></use>
+          </svg></a>
           <a href="#"><svg class="icon" aria-hidden="true">
-    <use xlink:href="#icon-weibo"></use>
-</svg></a>
+             <use xlink:href="#icon-weibo"></use>
+          </svg></a>
 					<a href="#"><svg class="icon" aria-hidden="true">
-    <use xlink:href="#icon-daorujianshu"></use>
-</svg></a>
-
+             <use xlink:href="#icon-daorujianshu"></use>
+          </svg></a>
         </footer>
       </div>
-       <div class="dow">
+        <div class="dow">
         <a class="button" href="#" target="_blank" dowload>下载 PDF 简历</a>
       </div>
       <div class="selfIntroduction">
@@ -161,8 +163,7 @@
           <li id="works1">所有</li>
           <li id="works2">框架</li>
           <li id="works3">原生JS&amp;CSS</li>
-        </ol>
-      
+        </ol>     
       <div id="worksBar" class="state1">
         <div class="worksBarIn">
         </div>
@@ -179,8 +180,8 @@
           <img src='./img/3.jpg'>
         </div>
       </div>
-
     </section>
+    
     <script>
       works1.onclick=function(){
         worksBar.className='state1';
