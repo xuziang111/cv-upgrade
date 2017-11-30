@@ -57,6 +57,7 @@ nav ul li{
 	color:grey;	
 	padding:9px 17px 10px 17px;
   display:block;
+  position: relative;
  }
 nav ul li a{
 	text-decoration:none;
@@ -306,4 +307,16 @@ dd{
 }
 .jobs .small{
   position:absolute;
+}
+
+.submenu{
+  position: absolute;
+  top:100%;
+  left:0;
+  white-space: nowrap;
+  display:none;
+}
+nav > ul > li:hover .submenu {
+  display:block;
+ 
 }
