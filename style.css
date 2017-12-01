@@ -87,6 +87,18 @@ nav > ul > li > a:hover::after{
     width:100%;
   }
 }
+
+.submenu{
+  position: absolute;
+  top:100%;
+  left:0;
+  white-space: nowrap;
+  display:none;
+}
+
+.submenu.active{
+  display:block;
+}
 .banner{
   height: 515px;
   background-image:url(https://github.com/xuziang111/cv/blob/master/rs-cover.jpg?raw=true);
@@ -309,14 +321,3 @@ dd{
   position:absolute;
 }
 
-.submenu{
-  position: absolute;
-  top:100%;
-  left:0;
-  white-space: nowrap;
-  display:none;
-}
-nav > ul > li:hover .submenu {
-  display:block;
- 
-}
