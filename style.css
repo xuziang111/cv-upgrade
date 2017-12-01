@@ -47,35 +47,31 @@ a{
 .topNavBar .topNavBarIn .card{
 	color:#9A9DA2;
 }
-nav ul{
+nav>ul{
 	list-style:none;
 	float:right;
 }
 
-nav ul li{
+nav>ul>li{
 	float:left;
 	color:grey;	
-	padding:9px 17px 10px 17px;
+	margin:9px 17px 10px 17px;
   display:block;
   position: relative;
  }
-nav ul li a{
+nav>ul>li>a{
 	text-decoration:none;
 	color:#B7B7B7;
 	font-size:14px;
-  padding-bottom:3px;
   display:block;
   position:relative;
 }
-nav > ul > li > a:hover::after{
+nav > ul > li.active a::after{
   content:'';
   display:block;
   background: #E06567;
   height:3px;
   width:100%;
-  position:absolute;
-  top:100%;
-  left:0;
   animation: heng .3s linear;
   border-radius:1.5px;
 }
@@ -91,14 +87,30 @@ nav > ul > li > a:hover::after{
 .submenu{
   position: absolute;
   top:100%;
-  left:0;
+  right:0;
   white-space: nowrap;
   display:none;
+  background:white;
+  border-radius:2px;
+  color:#3d4451;
+  box-shadow: 0 0 5px rgba(0,0,0,0.5);
+  animation: submenuSlide .3s;
 }
-
-.submenu.active{
+.submenu li{
+  padding:5px 10px;
+}
+li.active .submenu{
   display:block;
 }
+@keyframes submenuSlide{
+  0%{
+    margin-right: 100%;
+  }
+  100%{
+    margin-right: 0%;
+  }
+}
+
 .banner{
   height: 515px;
   background-image:url(https://github.com/xuziang111/cv/blob/master/rs-cover.jpg?raw=true);

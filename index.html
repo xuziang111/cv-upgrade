@@ -53,15 +53,16 @@
           <ul class="clearfix">
             <li><a href="#">关于</a></li>
             <li><a href="#">技能</a></li>
-            <li>
-              <a class='menuDown' href="#">作品</a>
+            <li class='menuDown'>
+              <a href="#">作品</a>
                 <ul class='submenu'>
                   <li>作品1</li>
                   <li>作品2</li>
                   <li>作品3</li>
                 </ul>
             </li>
-            <li><a class='menuDown' href="#">博客</a>
+            <li class='menuDown'>
+              <a href="#">博客</a>
               <ul class='submenu'>
                 <li>博客1</li>
                 <li>博客2</li>
@@ -206,24 +207,13 @@
         }
       }  
 
-      let aTags = document.getElementsByClassName('menuDown');
-      console.log(aTags);
-      
+      let aTags = document.getElementsByTagName('LI');  
       for(let i=0;i<aTags.length;i++){
         aTags[i].onmouseenter = function (x) {
-          let el = x.currentTarget.nextSibling;
-          while(el.nodeType === 3){
-             el = el.nextSibling;
-
-          }
-          el.classList.add('active');
+          x.currentTarget.classList.add('active');
        }
        aTags[i].onmouseleave= function (x) {
-          let el = x.currentTarget.nextSibling;
-          while(el.nodeType === 3){
-             el = el.nextSibling;
-          }
-          el.classList.remove('active');
+          x.currentTarget.classList.remove('active');
        }
       }
       loading.classList.remove('loading');
