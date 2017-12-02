@@ -51,22 +51,22 @@
         </a>
         <nav>
           <ul class="clearfix">
-            <li><a href="#">关于</a></li>
-            <li><a href="#">技能</a></li>
+            <li><a href="#user">关于</a></li>
+            <li><a href="#skill">技能</a></li>
             <li class='menuDown'>
-              <a href="#">作品</a>
+              <a href="#works">作品</a>
                 <ul class='submenu'>
-                  <li>作品1</li>
-                  <li>作品2</li>
-                  <li>作品3</li>
+                  <li><a href='#'></a>作品1</a></li>
+                  <li><a href='#'></a>作品2</a></li>
+                  <li><a href='#'></a>作品3</a></li>
                 </ul>
             </li>
             <li class='menuDown'>
               <a href="#">博客</a>
               <ul class='submenu'>
-                <li>博客1</li>
-                <li>博客2</li>
-                <li>博客3</li>
+                <li><a href='#'></a>博客1</a></li>
+                <li><a href='#'></a>博客2</a></li>
+                <li><a href='#'></a>博客3</a></li>
               </ul>
             </li>
             <li><a href="#">日历</a></li>
@@ -81,7 +81,7 @@
 			</div>
 		</div>
     <main>
-      <div class="user">
+      <div id='user' class="user">
         <div class="pictureAndText">
 					<div class="picCrad clearfix">
           <div class="picture">							
@@ -132,7 +132,7 @@
       </p>
       </div>
     </main>
-    <section class="skill">
+    <section id='skill' class="skill">
       <h2>技能</h2>
       <ol class="clearfix">
         <li><h3>HTML 5 &amp; CSS 3</h3>
@@ -163,7 +163,7 @@
           </div></li>
       </ol>
     </section>
-    <section class="works">
+    <section id='works' class="works">
       <h2>作品集</h2>
       <nav>
         <ol class="clearfix">
@@ -188,35 +188,7 @@
         </div>
       </div>
     </section>
-
-    <script>
-      works1.onclick=function(){
-        worksBar.className='state1';
-      };
-      works2.onclick=function(){
-        worksBar.className='state2';
-      };
-      works3.onclick=function(){
-        worksBar.className='state3';
-      };
-      window.onscroll=function(){
-        if(window.scrollY>0){      
-          topNavBarIn.classList.add('stick');       
-        }else{
-          topNavBarIn.classList.remove('stick');
-        }
-      }  
-
-      let aTags = document.getElementsByTagName('LI');  
-      for(let i=0;i<aTags.length;i++){
-        aTags[i].onmouseenter = function (x) {
-          x.currentTarget.classList.add('active');
-       }
-       aTags[i].onmouseleave= function (x) {
-          x.currentTarget.classList.remove('active');
-       }
-      }
-      loading.classList.remove('loading');
-</script>
+    
+    <script src="./script.js"></script>
   </body>
 </html>
