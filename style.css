@@ -66,7 +66,7 @@ nav>ul>li>a{
   display:block;
   position:relative;
 }
-nav > ul > li.active a::after{
+nav > ul > li.active>a::after{
   content:'';
   display:block;
   background: #E06567;
