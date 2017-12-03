@@ -28,11 +28,19 @@ let aTags = document.querySelectorAll('nav>ul>li>a');
 for(let i=0;i<aTags.length;i++){
   aTags[i].onclick = function(x) {
   x.preventDefault();
-  let a = x.currentTarget;
-  let href = a.getAttribute('href');
-  let el = document.querySelector(href);
-  let top = el.offsetTop;
-  window.scrollTo(0,top - 60);
+  let top = document.querySelector(x.currentTarget.getAttribute('href')).offsetTop;
+  let j=0,n = 25;
+  let duration = 500/n;
+  let currentTop = window.scrollY;
+  let distance = (top- 60 - currentTop)/n;
+  let xx = setInterval(()=>{
+      window.scrollTo(0,currentTop + distance * j);
+      j++;
+      if(j===n+1){
+        window.clearInterval(xx);
+        return
+      }
+  },duration)
 
   }
 }
