@@ -1,4 +1,3 @@
-
 works1.onclick=function(){
   worksBar.className='state1';
 };
@@ -8,15 +7,17 @@ works2.onclick=function(){
 works3.onclick=function(){
   worksBar.className='state3';
 };
+//------------
 var obj = {x:1,minIndex:0,Y:0} ;
 obj.Y=window.scrollY;
+//-------------
 window.onscroll=function(){
   if(window.scrollY>0){      
     topNavBarIn.classList.add('stick');       
   }else{
     topNavBarIn.classList.remove('stick');
   }
-
+//-------------
   let specialTags = document.querySelectorAll('[data-y]');
   if(obj.Y<window.scrollY&&specialTags[obj.minIndex+1].offsetTop - window.scrollY-window.innerHeight <= 0){
       obj.minIndex=obj.x;
@@ -32,7 +33,7 @@ window.onscroll=function(){
       
     }
   
-
+//-------------
   let li = document.querySelector('a[href="#' + specialTags[obj.minIndex].id + '"]').parentNode;
   let brothers = li.parentNode.children;
   for(let k=0;k<brothers.length;k++){
@@ -99,5 +100,3 @@ for(let i=0;i<aTags.length;i++){
 
 window.scrollTo(0,1);
 loading.classList.remove('loading');
-
-
