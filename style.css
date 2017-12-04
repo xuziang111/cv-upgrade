@@ -75,6 +75,15 @@ nav > ul > li.active>a::after{
   animation: heng .3s linear;
   border-radius:1.5px;
 }
+.highlight>a::after{
+  content:'';
+  display:block;
+  background: #E06567;
+  height:3px;
+  width:100%;
+  animation: heng .3s linear;
+  border-radius:1.5px;
+}
 @keyframes heng{
   0%{
     width:0

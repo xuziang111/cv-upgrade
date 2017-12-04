@@ -13,7 +13,27 @@ window.onscroll=function(){
   }else{
     topNavBarIn.classList.remove('stick');
   }
+
+  let specialTags = document.querySelectorAll('[data-y]');
+  let minIndex = 0;
+  for(let i=1;i<specialTags.length;i++){
+    if(Math.abs(specialTags[i].offsetTop - window.scrollY) < Math.abs(specialTags[minIndex].offsetTop - window.scrollY)){
+      minIndex=i;
+      console.log(minIndex);
+      console.log(Math.abs(specialTags[i].offsetTop-window.scrollY));
+      console.log(Math.abs(specialTags[minIndex].offsetTop-window.scrollY));
+    }
+  }
+  specialTags[minIndex].classList.remove('offset');
+  let li = document.querySelector('a[href="#' + specialTags[minIndex].id + '"]').parentNode;
+  let brothers = li.parentNode.children;
+  for(let i=0;i<brothers.length;i++){
+    brothers[i].classList.remove('highlight');
+  }
+  li.classList.add('highlight');
+
 }  
+
 let liTags = document.getElementsByTagName('LI');  
 for(let i=0;i<liTags.length;i++){
   liTags[i].onmouseenter = function (x) {
@@ -43,12 +63,13 @@ for(let i=0;i<aTags.length;i++){
   requestAnimationFrame(animate);
   var coords = { y: currentTop }; 
   var tween = new TWEEN.Tween(coords) 
-    .to({y: (top- 60) }, t*100) 
+    .to({y: (top- 60) }, t*200) 
     .easing(TWEEN.Easing.Quadratic.InOut) 
     .onUpdate(function() {             
       window.scrollTo(0,coords.y)
     })
     .start(); 
+
 
 
 /**  let j=0,n = 25;//动多少次
