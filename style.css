@@ -342,3 +342,14 @@ dd{
   position:absolute;
 }
 
+[data-y].active{
+  animation:slidup .7s;
+}
+@keyframes slidup{
+  0%{
+    transform: translateY(200px); 
+  }
+  100%{
+    transform:translateY(0px);
+  }
+}
