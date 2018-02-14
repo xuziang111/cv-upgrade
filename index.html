@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>xxx的个人简历</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/css/swiper.min.css">
     <link rel="stylesheet" href="./style.css">
     <script src="//at.alicdn.com/t/font_457274_lij6unjshn2ep14i.js"></script>
     <style>
@@ -62,7 +63,7 @@
                 </ul>
             </li>
             <li class='menuDown'>
-              <a href="#">博客</a>
+              <a href="#blog">博客</a>
               <ul class='submenu'>
                 <li><a href='#'></a>博客1</a></li>
                 <li><a href='#'></a>博客2</a></li>
@@ -81,7 +82,7 @@
 			</div>
 		</div>
     <main>
-      <div id='user' class="user active" data-y>
+      <div data-y id='user' class="user active">
         <div class="pictureAndText">
 					<div class="picCrad clearfix">
           <div class="picture">							
@@ -132,7 +133,7 @@
       </p>
       </div>
     </main>
-    <section id='skill' class="skill" data-y>
+    <section data-y id='skill' class="skill">
       <h2>技能</h2>
       <ol class="clearfix">
         <li><h3>HTML 5 &amp; CSS 3</h3>
@@ -163,32 +164,42 @@
           </div></li>
       </ol>
     </section>
-    <section id='works' class="works" data-y>
+    <section data-y id='works' class="works">
       <h2>作品集</h2>
-      <nav>
-        <ol class="clearfix">
-          <li id="works1">所有</li>
-          <li id="works2">框架</li>
-          <li id="works3">原生JS&amp;CSS</li>
-        </ol>     
-      <div id="worksBar" class="state1">
-        <div class="worksBarIn">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><a href="https://lolimy.club/start"><img src="./img/works/nav-page.jpg" width="600" alt="nav-page"></a></div>
+            <div class="swiper-slide"><a href="https://lolimy.club/canvas"><img src="./img/works/canvas.jpg" width="600" alt="canvas"></a></div>
+            <div class="swiper-slide"><a href="https://lolimy.club/simple-slideshow/slides-demo-3/"><img src="./img/works/apple-like.jpg" width="600" alt="apple-like"></a></div>
         </div>
-      </div>
-        </nav>
-      <div class="jobs" style="height:597px">
-        <div class="big">
-          <img src='./img/1.jpg'>
-        </div>
-        <div class="small" style="top:0;left:645px">
-          <img src='./img/2.jpg'>
-        </div>
-        <div class="small" style="top: 312px; left: 645px;">
-          <img src='./img/3.jpg'>
-        </div>
-      </div>
+        <div class="swiper-pagination"></div>
+    </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
     </section>
+
+    <section data-y id='blog' class="blog">
+      <h2>博客</h2>
+      
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/js/swiper.min.js"></script>
     <script src="./tween.js"></script>
+    <script>
+      var mySwiper = new Swiper ('.swiper-container', {
+        autoplay: true,
+        loop:true,
+        pagination: {
+          el: '.swiper-pagination',
+        },
+    
+        // Navigation arrows
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+  
+      })
+      </script>
     <script src="./script.js"></script>
 
   </body>

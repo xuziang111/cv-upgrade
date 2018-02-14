@@ -1,15 +1,12 @@
-works1.onclick=function(){
-  worksBar.className='state1';
-};
-works2.onclick=function(){
-  worksBar.className='state2';
-};
-works3.onclick=function(){
-  worksBar.className='state3';
-};
-//------------
-var obj = {x:1,minIndex:0,Y:0} ;
-obj.Y=window.scrollY;
+
+window.onscroll=function(){
+  if(window.scrollY>0){      
+    topNavBarIn.classList.add('stick');       
+  }else{
+    topNavBarIn.classList.remove('stick');
+  }
+  findClose()
+}
 //-------------
 window.onscroll=function(){
   if(window.scrollY>0){      
@@ -17,41 +14,38 @@ window.onscroll=function(){
   }else{
     topNavBarIn.classList.remove('stick');
   }
-//-------------
-  let specialTags = document.querySelectorAll('[data-y]');
-  if(obj.Y<window.scrollY&&specialTags[obj.minIndex+1].offsetTop - window.scrollY-window.innerHeight <= 0){
-      obj.minIndex=obj.x;
-      specialTags[obj.x].classList.add('active');
-      if(obj.x<2){
-      obj.x=obj.x+1;
-    }
-    }else  if (obj.Y>window.scrollY&&specialTags[obj.minIndex].offsetTop - window.scrollY-window.innerHeight > 0&&obj.x>0){      
-      specialTags[obj.x].classList.remove('active');
-      obj.x=obj.x-1;
-      specialTags[obj.x].classList.add('active');
-      obj.minIndex=obj.x;
-      
-    }
+  findClosest()
+}
   
 //-------------
-  let li = document.querySelector('a[href="#' + specialTags[obj.minIndex].id + '"]').parentNode;
-  let brothers = li.parentNode.children;
-  for(let k=0;k<brothers.length;k++){
-    brothers[k].classList.remove('highlight');
-  }
-  li.classList.add('highlight');
-  obj.Y=window.scrollY;
-}  
-
-let liTags = document.getElementsByTagName('LI');  
-for(let i=0;i<liTags.length;i++){
-  liTags[i].onmouseenter = function (x) {
-    x.currentTarget.classList.add('active');
- }
- liTags[i].onmouseleave= function (x) {
-    x.currentTarget.classList.remove('active');
- }
-}
+function findClosest(){
+    let specialTags = document.querySelectorAll('[data-y]');
+    let minIndex = 0;
+    for(let i =1;i<specialTags.length; i++){
+      if(Math.abs(specialTags[i].offsetTop - window.scrollY) < Math.abs(specialTags[minIndex].offsetTop - window.scrollY)){
+        minIndex = i;
+      }
+    }
+    // minIndex 就是里窗口顶部最近的元素
+    specialTags[minIndex].classList.add('active');
+    let id = specialTags[minIndex].id;
+    let a = document.querySelector('a[href="#'+ id + '"]');
+    let li = a.parentNode;
+    let brothersAndMe = li.parentNode.children;
+    for(let i=0; i<brothersAndMe.length; i++){
+      brothersAndMe[i].classList.remove('highlight');
+    }
+    li.classList.add('highlight');
+   }
+   let liTags = document.querySelectorAll('nav > ul > li');
+   for(let i=0; i<liTags.length; i++){
+     liTags[i].onmouseenter = function(x){
+       x.currentTarget.classList.add('active');
+     }
+     liTags[i].onmouseleave = function(x){
+       x.currentTarget.classList.remove('active');
+     }
+   }
 
 let aTags = document.querySelectorAll('nav>ul>li>a');
 for(let i=0;i<aTags.length;i++){

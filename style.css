@@ -276,8 +276,10 @@ dd{
   padding-bottom:3px;
 }
 .works{
-
+  position: relative;
   text-align:center;
+  max-width:800px;
+  margin:0 auto;
 }
 .works h2{
   color:#3d4451;
@@ -286,62 +288,15 @@ dd{
     text-align:center;
     margin-bottom:20px;
 }
-.works>nav{
-  vertical-align:top;
-  display:inline-block;
-   margin:0 auto;
-  max-width: 940px;
+.works .swiper-button-prev , .works .swiper-button-next{
+  background-color:#EFEFEF;
+  width:47px;
+  height:47px;
+  border-radius:50%;
 }
-.works>nav>ol{
- 
-  margin:0 auto;
-  display:inline-block;
-  vertical-align:top;
+.works .swiper-button-prev:hover , .works .swiper-button-next:hover{
+  background-color:grey;
 }
-.works>nav>ol>li{
-  float:left;
-  margin-left:40px;
-  cursor:pointer;
-}
-.works>nav>ol>li:nth-child(1){
-  margin:0;
-}
-#worksBar{
-  margin-top:10px;
-  background-color:white;
-  height:5px;
-  border-radius:2px;
-}
-#worksBar .worksBarIn{
-  background-color:#E6686A;
-  height:100%;
-  border-radius:2px;
-  transition:all 0.2s;
-}
-.state1 .worksBarIn{
-  margin-left:0;
-  width:55px;
-}
-.state2 .worksBarIn{
-  margin-left:62px;
-  width:55px;
-}
-.state3 .worksBarIn{
-  width:100px;
-  margin-left:135px;
-}
-.jobs{
-  position:relative;
-  max-width:940px;
-  margin:30px auto;
-}
-.jobs .big{
-  position:absolute;
-}
-.jobs .small{
-  position:absolute;
-}
-
 [data-y].active{
   animation:slidup .7s;
 }
@@ -352,4 +307,19 @@ dd{
   100%{
     transform:translateY(0px);
   }
+}
+.blog h2{
+  color:#3d4451;
+  font-size:34px;
+  font-weight: 600;
+    text-align:center;
+    margin-bottom:20px;
+}
+.swiper-container {
+  width: 600px;
+  height: 400px;
+}
+
+section.swiper-button-prev{
+  width:
 }
