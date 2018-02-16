@@ -35,7 +35,7 @@ a{
   padding:20px 20px;
   transition: all .3s;
 }
-.stick{
+.sticky{
   background-color:#fff;
   box-shadow:0 0 8px rgba(0,0,0,0.5);
   padding:10px 20px;

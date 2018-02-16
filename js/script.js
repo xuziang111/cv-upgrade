@@ -1,21 +1,7 @@
 
-window.onscroll=function(){
-  if(window.scrollY>0){      
-    topNavBarIn.classList.add('stick');       
-  }else{
-    topNavBarIn.classList.remove('stick');
-  }
-  findClose()
-}
-//-------------
-window.onscroll=function(){
-  if(window.scrollY>0){      
-    topNavBarIn.classList.add('stick');       
-  }else{
-    topNavBarIn.classList.remove('stick');
-  }
+window.addEventListener('scroll',function(){
   findClosest()
-}
+})
   
 //-------------
 function findClosest(){
