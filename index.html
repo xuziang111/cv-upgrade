@@ -18,7 +18,7 @@
         <a class="logo" href="#" alt="logo">
           <span class="rs">RS</span><span class="card">card</span>
         </a>
-        <nav>
+        <nav class="menu">
           <ul class="clearfix">
             <li><a href="#user">关于</a></li>
             <li><a href="#skill">技能</a></li>
@@ -132,8 +132,10 @@
           </div></li>
       </ol>
     </section>
+
     <section data-y id='works' class="works">
       <h2>作品集</h2>
+      <div id="myWorks">
       <div class="swiper-container">
         <div class="swiper-wrapper">
             <div class="swiper-slide"><a href="https://lolimy.club/start"><img src="./img/works/nav-page.jpg" width="600" alt="nav-page"></a></div>
@@ -144,17 +146,20 @@
     </div>
       <div class="swiper-button-prev"></div>
       <div class="swiper-button-next"></div>
+    </div>
     </section>
 
     <section data-y id='blog' class="blog">
-      <h2>博客</h2>
-      
+      <h2>博客</h2> 
     </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/js/swiper.min.js"></script>
     <script src="./js/tween.js"></script>
     <script src="./js/inint-swiper.js"></script>
-    <script src="./js/script.js"></script>
+    <script src="./js/auto-offset.js"></script>
+    <script src="./js/main.js"></script>
     <script src="./js/topbar-sticky.js"></script>
     <script src="./js/smoothly-nav.js"></script>
   </body>
 </html>
+
+

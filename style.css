@@ -262,14 +262,21 @@ dd{
   background-color:#FAE1E1;
   border-radius: 2px;
     margin-bottom:40px;
+    overflow: hidden;
 
 }
 .progressBar .progress{
   height:5px;
   background-color:#E6686A;
   border-radius: 2px;
-  width:50%;
+  width:70%;
+  transform: translateX(-100%); 
+  transition: all 1s;
 }
+.offset .progress{
+  transition: all 1s;
+  transform: translateX(0);
+} 
 .skill>ol>li>h3{
       font-size: 14px;
     line-height: 1.1;
@@ -297,7 +304,7 @@ dd{
 .works .swiper-button-prev:hover , .works .swiper-button-next:hover{
   background-color:grey;
 }
-[data-y].active{
+[data-y].offset{
   animation:slidup .7s;
 }
 @keyframes slidup{
@@ -323,3 +330,4 @@ dd{
 section.swiper-button-prev{
   width:
 }
+
