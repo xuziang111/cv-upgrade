@@ -38,7 +38,7 @@
                 <li><a href='#'></a>博客3</a></li>
               </ul>
             </li>
-            <li><a href="#">日历</a></li>
+            <li><a href="#leaveMessage">留言</a></li>
             <li><a href="#">联系方式</a></li>
             <li><a href="#">其他</a></li>
           </ul>
@@ -152,11 +152,23 @@
     <section data-y id='blog' class="blog">
       <h2>博客</h2> 
     </section>
+
+    <section id="leaveMessage" class="leaveMessage" data-y>   
+      <h2>留言</h2> 
+      <div id="messageList"></div>
+      <form id="postMessageForm">
+        <input type="text" name="content">
+        <input type="submit">
+      </form>
+    </section>
+
+    <script src="./js/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/js/swiper.min.js"></script>
+    <script src="//cdn1.lncld.net/static/js/3.6.0/av-min.js"></script>
+    <script src="./js/message.js"></script>
     <script src="./js/tween.js"></script>
     <script src="./js/inint-swiper.js"></script>
     <script src="./js/auto-offset.js"></script>
-    <script src="./js/main.js"></script>
     <script src="./js/topbar-sticky.js"></script>
     <script src="./js/smoothly-nav.js"></script>
   </body>
