@@ -30,7 +30,7 @@
 			this.view = view;
 			this.model = model;
 			this.model.init();
-			this.messageList = view.querySelector('#messageList')
+			this.messageList = view.querySelector('#messageList > ol')
 			this.form = view.querySelector('form')
 			this.loadMessages();
 			this.bindEvents();
