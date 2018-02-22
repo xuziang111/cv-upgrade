@@ -25,8 +25,9 @@
 
   var controller ={
 		view:null,
+		model:null,
 		messageList:null,
-    init:function(view){
+    init:function(view,model){
 			this.view = view;
 			this.model = model;
 			this.model.init();
@@ -50,11 +51,11 @@
 			},
 			bindEvents:function(){
 				let myForm = this.form
-				myForm.addEventListener('submit',function(e){
+				myForm.addEventListener('submit',(e) => {
 					e.preventDefault();
 					let name = myForm.querySelector('input[name=name]').value;
 					let content = myForm.querySelector('input[name=content]').value;
-					console.log(content)
+					console.log(this.model)
 					this.model.save(name,content).then(function(object) {
 						let li = document.createElement('li');
 						li.innerText = `${object.attributes.name}:${object.attributes.content}`;
@@ -66,5 +67,5 @@
 
 		}	
   }
-controller.init(view);
+controller.init(view,model);
 }.call()
