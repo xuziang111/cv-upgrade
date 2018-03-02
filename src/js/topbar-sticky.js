@@ -1,4 +1,4 @@
-!function(){
+function fn(){
   let view = document.querySelector('#topNavBarIn')
   let controller = {
     view:null,
@@ -23,4 +23,5 @@
     }
   }
   controller.init();
-}.call()
+}
+export default fn

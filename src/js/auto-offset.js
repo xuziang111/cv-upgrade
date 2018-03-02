@@ -1,4 +1,4 @@
-!function(){
+function fn(){
 window.addEventListener('scroll',function(){
     findClosest()
   })
@@ -31,4 +31,6 @@ function findClosest(){
        x.currentTarget.classList.remove('active');
      }
    }
-  }.call()
+  }
+
+  export default fn

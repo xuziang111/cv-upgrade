@@ -1,4 +1,4 @@
-!function(){
+function fn(){
   let view = document.querySelector('nav.menu');
   let controller = {
     view:null,
@@ -46,4 +46,5 @@
     },
   }
   controller.init()
-}.call()
+}
+export default fn

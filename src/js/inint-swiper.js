@@ -1,4 +1,4 @@
-!function(){
+function fn(){
   let view = document.querySelector('#myWorks')
   let controller = {
     view:null,
@@ -26,4 +26,5 @@
     },
   }
   controller.init(view);
-}.call()
+}
+export default fn

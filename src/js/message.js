@@ -1,4 +1,4 @@
-!function(){
+function fn(){
 	let view = document.querySelector("#leaveMessage")
 	let model = {
 		init:function(){
@@ -63,4 +63,5 @@
 		},
   }
 controller.init(view,model);
-}.call()
+}
+export default fn
